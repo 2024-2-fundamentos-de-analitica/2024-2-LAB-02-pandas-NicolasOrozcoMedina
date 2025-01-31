@@ -7,6 +7,14 @@ librerias de pandas para resolver las preguntas.
 
 
 def pregunta_07():
+
+    import pandas as pd
+    # Cargar el archivo TSV en un DataFrame
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+
+    suma = df.groupby("c1")["c2"].sum()
+
+    return suma
     """
     Calcule la suma de la `c2` por cada letra de la `c1` del archivo
     `tbl0.tsv`.

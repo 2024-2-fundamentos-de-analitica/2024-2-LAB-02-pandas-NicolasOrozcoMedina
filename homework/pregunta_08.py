@@ -7,6 +7,14 @@ librerias de pandas para resolver las preguntas.
 
 
 def pregunta_08():
+    
+    import pandas as pd
+    # Cargar el archivo TSV en un DataFrame
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+
+    df["suma"] = df["c0"] + df["c2"]
+
+    return df
     """
     Agregue una columna llamada `suma` con la suma de `c0` y `c2` al
     data frame que contiene el archivo `tbl0.tsv`.

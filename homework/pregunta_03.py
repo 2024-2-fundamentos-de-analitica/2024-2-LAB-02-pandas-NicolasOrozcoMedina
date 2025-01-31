@@ -7,6 +7,13 @@ librerias de pandas para resolver las preguntas.
 
 
 def pregunta_03():
+    import pandas as pd
+    # Cargar el archivo TSV en un DataFrame
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+
+    conteo = df["c1"].value_counts().sort_index()
+
+    return conteo
     """
     ¿Cuál es la cantidad de registros por cada letra de la columna `c1` del
     archivo `tbl0.tsv`?
